@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Gra Memory</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory – Gra Pamięci</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Gra Memory</h1>
-    <div id="game-board" class="grid"></div>
-    <button id="restart-btn">Zagraj od nowa</button>
+  <!-- HEADER -->
+  <header>
+    <h1>MEMORY</h1>
+    <p>Znajdź wszystkie pary</p>
+  </header>
 
-    <script src="script.js"></script>
+  <!-- SETUP PANEL -->
+  <div id="setup-panel">
+    <h2>Ile gracz‌y?</h2>
+    <div class="player-selector">
+      <button id="dec-btn">−</button>
+      <span id="player-count-display">1</span>
+      <button id="inc-btn">+</button>
+    </div>
+    <button id="start-btn">Rozpocząć grę</button>
+  </div>
+
+  <!-- GAME WRAPPER -->
+  <div id="game-wrapper">
+    <div id="scoreboard"></div>
+    <div id="game-board"></div>
+    <div id="controls">
+      <button id="restart-btn">↺ Zagraj od nowa</button>
+      <button id="back-btn">← Zmiana gracz‌y</button>
+    </div>
+  </div>
+
+  <!-- ZOOM OVERLAY (celebracja pary) -->
+  <div id="zoom-overlay">
+    <div id="zoom-card-wrap"></div>
+    <div id="zoom-label">Para znaleziona!</div>
+  </div>
+
+  <!-- WIN OVERLAY -->
+  <div id="win-overlay">
+    <h2>Koniec gry!</h2>
+    <p id="win-sub"></p>
+    <div id="final-scores"></div>
+    <button id="play-again-btn">Grać ponownie</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
