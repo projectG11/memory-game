@@ -347,7 +347,6 @@ header p {
 }
 
 #zoom-overlay.show { display: flex; }
-
 @keyframes fadeInOverlay {
   from { opacity: 0; }
   to   { opacity: 1; }

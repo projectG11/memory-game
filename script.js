@@ -199,11 +199,11 @@ function showZoom(name) {
   zoomCardWrap.innerHTML = `
     <div class="zoom-card"><img src="${src}" alt="${name}"></div>
     <div class="zoom-card"><img src="${src}" alt="${name}"></div>`;
-  zoomOverlay.classList.add('show');
+  zoomOverlay.style.display = 'flex';
 }
 
 function closeZoom() {
-  zoomOverlay.classList.remove('show');
+  zoomOverlay.style.display = 'none';
 }
 
 // ═══════════════════════════════════════════
@@ -258,7 +258,7 @@ function showWin() {
     }
   }
 
-  winOverlay.classList.add('show');
+  winOverlay.style.display = 'flex';
 }
 
 // ═══════════════════════════════════════════
@@ -271,14 +271,14 @@ document.getElementById('restart-btn').addEventListener('click', () => {
 });
 
 document.getElementById('back-btn').addEventListener('click', () => {
-  gameWrapper.style.display = 'none';
-  setupPanel.style.display  = 'block';
-  winOverlay.classList.remove('show');
-  zoomOverlay.classList.remove('show');
+  gameWrapper.style.display  = 'none';
+  setupPanel.style.display   = 'block';
+  winOverlay.style.display   = 'none';
+  zoomOverlay.style.display  = 'none';
 });
 
 document.getElementById('play-again-btn').addEventListener('click', () => {
-  winOverlay.classList.remove('show');
+  winOverlay.style.display = 'none';
   scores.fill(0);
   currentPlayer = 0;
   initGame();

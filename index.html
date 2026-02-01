@@ -28,8 +28,8 @@
     <button id="start-btn">Rozpocząć grę</button>
   </div>
 
-  <!-- GAME WRAPPER -->
-  <div id="game-wrapper">
+  <!-- GAME WRAPPER (ukryty do czasu rozpoczęcia gry) -->
+  <div id="game-wrapper" style="display:none">
     <div id="scoreboard"></div>
     <div id="game-board"></div>
     <div id="controls">
@@ -38,14 +38,14 @@
     </div>
   </div>
 
-  <!-- ZOOM OVERLAY (celebracja pary) -->
-  <div id="zoom-overlay">
+  <!-- ZOOM OVERLAY (celebracja pary – ukryty do czasu match) -->
+  <div id="zoom-overlay" style="display:none">
     <div id="zoom-card-wrap"></div>
     <div id="zoom-label">Para znaleziona!</div>
   </div>
 
-  <!-- WIN OVERLAY -->
-  <div id="win-overlay">
+  <!-- WIN OVERLAY (koniec gry – ukryty do czasu wygranej) -->
+  <div id="win-overlay" style="display:none">
     <h2>Koniec gry!</h2>
     <p id="win-sub"></p>
     <div id="final-scores"></div>
